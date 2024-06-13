@@ -65,4 +65,12 @@ Map<String, String> en = {
   "found": "found",
   "results": "results",
   "topCategories": "Top Categories",
+  "profile": "Profile",
+  "personData": "Person Data",
+  "settings": "Settings",
+  "support": "Support",
+  "helpCenter": "Help Center",
+  "addAnotherAccount": "Add another account",
+  "language": "Language",
+  "logOut": "LogOut",
 };

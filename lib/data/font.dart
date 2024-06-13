@@ -24,4 +24,5 @@ class FontManager {
   static TextStyle s16w500cB = ts(16, FontWeight.w500, ColorsManager.black);
   static TextStyle s16w700cB = ts(16, FontWeight.w700, ColorsManager.black);
   static TextStyle s16w700cW = ts(16, FontWeight.w700, ColorsManager.white);
+  static TextStyle s18w400cB = ts(18, FontWeight.w400, ColorsManager.black);
 }
