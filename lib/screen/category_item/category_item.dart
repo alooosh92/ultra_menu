@@ -5,36 +5,36 @@ import 'package:ultra_menu/screen/home/widget/bottom_home_navigation_bar.dart';
 import 'package:ultra_menu/screen/home/widget/floating_action_button_home.dart';
 import 'package:ultra_menu/widget/app_bar_def.dart';
 import 'package:ultra_menu/widget/list_item.dart';
+import 'package:ultra_menu/widget/search_row.dart';
 
-class FavoriteScreen extends StatelessWidget {
-  const FavoriteScreen({super.key});
-
+class CategoryItem extends StatelessWidget {
+  const CategoryItem({super.key, required this.appText});
+  final String appText;
   @override
   Widget build(BuildContext context) {
-    List item = [];
     return Scaffold(
-      appBar: appBarDef("favorite".tr),
-      bottomNavigationBar: const BottomHomeNavigationBar(index: 1),
+      appBar: appBarDef(appText),
+      bottomNavigationBar: const BottomHomeNavigationBar(index: null),
       floatingActionButton: const FloatingActionButtonHome(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
           children: [
+            const SearchRow(),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  "${item.length.toString()} ${'product'.tr}",
-                  style: FontManager.s16w500cB,
+                  "${'found'.tr} 10 ${'results'.tr}",
+                  style: FontManager.s16w700cB,
                 ),
               ],
             ),
-            SizedBox(
-              width: MediaQuery.sizeOf(context).width,
-              height: MediaQuery.sizeOf(context).height - 215,
-              child: const ListItem(list: [1, 2, 3]),
-            )
+            const SizedBox(height: 10),
+            const Expanded(
+              child: ListItem(list: [1, 2, 3]),
+            ),
           ],
         ),
       ),

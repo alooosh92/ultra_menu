@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultra_menu/screen/category/category_screen.dart';
 import 'package:ultra_menu/screen/favorite/favorite_screen.dart';
 import 'package:ultra_menu/screen/home/home_screen.dart';
 import 'package:ultra_menu/screen/notification/notification.dart';
@@ -33,6 +34,8 @@ class HomrController {
         Get.off(const HomeScreen());
       case 1:
         Get.to(const FavoriteScreen());
+      case 2:
+        Get.to(const CategortScreen());
     }
   }
 

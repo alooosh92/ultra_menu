@@ -8,7 +8,7 @@ class BottomHomeNavigationBar extends StatelessWidget {
     super.key,
     required this.index,
   });
-  final int index;
+  final int? index;
   @override
   Widget build(BuildContext context) {
     return AnimatedBottomNavigationBar(
@@ -18,9 +18,10 @@ class BottomHomeNavigationBar extends StatelessWidget {
         Icons.grid_view_outlined,
         Icons.person
       ],
+      activeColor: index == null ? ColorsManager.primary : ColorsManager.black,
       inactiveColor: ColorsManager.primary,
       elevation: 10,
-      activeIndex: index,
+      activeIndex: index ?? 0,
       gapLocation: GapLocation.center,
       notchSmoothness: NotchSmoothness.defaultEdge,
       leftCornerRadius: 0,

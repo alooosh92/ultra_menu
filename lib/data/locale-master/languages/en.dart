@@ -60,5 +60,9 @@ Map<String, String> en = {
   "yesterday": "Yesterday",
   "today": "Today",
   "favorite": "My favorite List",
-  "product": "product"
+  "product": "product",
+  "category": "Category",
+  "found": "found",
+  "results": "results",
+  "topCategories": "Top Categories",
 };
