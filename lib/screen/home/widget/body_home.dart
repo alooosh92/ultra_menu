@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ultra_menu/controllers/homr_controller.dart';
+import 'package:ultra_menu/data/colors.dart';
 
 class BodyHome extends StatelessWidget {
   const BodyHome({
@@ -24,6 +25,7 @@ class BodyHome extends StatelessWidget {
           itemBuilder: (context, index) => const InkWell(
             onTap: HomrController.cardPress,
             child: Card(
+              color: ColorsManager.white,
               elevation: 10,
             ),
           ),

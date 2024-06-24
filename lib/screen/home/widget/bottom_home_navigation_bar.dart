@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:ultra_menu/controllers/homr_controller.dart';
 import 'package:ultra_menu/data/colors.dart';
+import 'package:ultra_menu/data/theme_service.dart';
 
 class BottomHomeNavigationBar extends StatelessWidget {
   const BottomHomeNavigationBar({
@@ -18,6 +19,9 @@ class BottomHomeNavigationBar extends StatelessWidget {
         Icons.grid_view_outlined,
         Icons.person
       ],
+      backgroundColor: ThemeService.isLightTheme()
+          ? ColorsManager.white
+          : ColorsManager.veryDarkGray,
       activeColor: index == null ? ColorsManager.primary : ColorsManager.black,
       inactiveColor: ColorsManager.primary,
       elevation: 10,

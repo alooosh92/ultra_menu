@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:ultra_menu/data/font.dart';
 import 'package:ultra_menu/screen/home/widget/drawer_option.dart';
 
@@ -58,6 +60,21 @@ class DrawerDefulte extends StatelessWidget {
                 text: "addAnotherAccount",
                 press: () {}),
             DrawerOption(icon: Icons.language, text: "language", press: () {}),
+            DrawerOption(
+              icon: Icons.dark_mode_outlined,
+              text: "themeMode",
+              press: () {
+                var storage = GetStorage();
+                bool theme = storage.read("theme");
+                if (theme) {
+                  storage.write("theme", false);
+                  Get.changeThemeMode(ThemeMode.dark);
+                } else {
+                  storage.write("theme", true);
+                  Get.changeThemeMode(ThemeMode.light);
+                }
+              },
+            ),
             DrawerOption(icon: Icons.logout, text: "logOut", press: () {}),
           ],
         ),

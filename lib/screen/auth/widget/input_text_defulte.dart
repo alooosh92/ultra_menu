@@ -44,30 +44,35 @@ class _InputTextDefulteState extends State<InputTextDefulte> {
             ],
           ),
           const SizedBox(height: 5),
-          TextFormField(
-            obscureText: widget.showPassword == null ? false : show,
-            keyboardType: widget.texttype,
-            controller: widget.controller,
-            decoration: InputDecoration(
-              suffixIcon: widget.showPassword == null
-                  ? null
-                  : InkWell(
-                      onTap: () => setState(() {
-                        show = !show;
-                      }),
-                      child: Icon(show
-                          ? FontAwesomeIcons.eye
-                          : FontAwesomeIcons.eyeSlash),
-                    ),
-              errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(5),
-                  borderSide: const BorderSide(color: ColorsManager.red)),
-              border: OutlineInputBorder(
+          Container(
+            decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-              ),
-              hintText: widget.hint.tr,
+                color: ColorsManager.white),
+            child: TextFormField(
+              obscureText: widget.showPassword == null ? false : show,
+              keyboardType: widget.texttype,
+              controller: widget.controller,
+              decoration: InputDecoration(
+                  suffixIcon: widget.showPassword == null
+                      ? null
+                      : InkWell(
+                          onTap: () => setState(() {
+                            show = !show;
+                          }),
+                          child: Icon(show
+                              ? FontAwesomeIcons.eye
+                              : FontAwesomeIcons.eyeSlash),
+                        ),
+                  errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: ColorsManager.red)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  hintText: widget.hint.tr,
+                  hintStyle: FontManager.s16w700cB),
+              validator: widget.validator,
             ),
-            validator: widget.validator,
           ),
         ],
       ),

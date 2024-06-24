@@ -6,8 +6,8 @@ import 'package:ultra_menu/data/font.dart';
 AppBar appBarDef(String text, {double? elevation}) {
   return AppBar(
     centerTitle: true,
-    backgroundColor: ColorsManager.white,
-    surfaceTintColor: ColorsManager.white,
+    // backgroundColor: ColorsManager.white,
+    // surfaceTintColor: ColorsManager.white,
     shadowColor: ColorsManager.gray,
     toolbarHeight: 100,
     elevation: elevation ?? 5,
