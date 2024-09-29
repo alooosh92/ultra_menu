@@ -73,4 +73,5 @@ Map<String, String> en = {
   "addAnotherAccount": "Add another account",
   "language": "Language",
   "logOut": "LogOut",
+  "themeMode": "Theme Mode",
 };
